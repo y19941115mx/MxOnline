@@ -41,7 +41,7 @@ class Course(models.Model):
 
 class BannerCourse(Course):
     class Meta:
-        verbose_name = u'轮播课程'
+        verbose_name = '轮播课程'
         verbose_name_plural = verbose_name
         # 如果不设置 proxy ，就会再生成一个 BannerCourse 数据表
         proxy = True
@@ -86,7 +86,7 @@ class CourseResource(models.Model):
     add_time = models.DateTimeField(auto_now_add=True, verbose_name='添加时间')
 
     class Meta:
-        verbose_name = u'课程资源'
+        verbose_name = '课程资源'
         verbose_name_plural = verbose_name
 
     def __str__(self):

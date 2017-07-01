@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'captcha',
-    # 'pure_pagination',
+    'pure_pagination',
 ]
 #自定义用户认证系统
 AUTH_USER_MODEL = 'users.UserProfile'
@@ -79,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -135,7 +136,6 @@ USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
 LOGIN_URL = '/login/'
 
 STATIC_URL = '/static/'
@@ -143,6 +143,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #邮箱配置
 EMAIL_HOST = 'smtp.qq.com'
@@ -151,3 +153,4 @@ EMAIL_HOST_USER = '1960892068@qq.com'
 EMAIL_HOST_PASSWORD = 'ofggbtlrssxehghi'
 EMAIL_USE_TLS = True
 EMAIL_FROM = '1960892068@qq.com'
+
