@@ -2,7 +2,6 @@
 {% load static %}
 {% block title %}课程机构列表 - 慕学在线网 {% endblock %}
 {% block custom_bread %}
-    <!--crumbs start-->
     <section>
         <div class="wp">
             <ul class="crumbs">
@@ -84,7 +83,7 @@
                                         </a>
                                     </div>
                                     <ul class="cont">
-                                        <li class="first"><p class="pic9">课程数：<span>{{ org.course_nums }}</span></p>
+                                        <li class="first"><p class="pic9">课程数：<span>{{ org.get_course_nums }}</span></p>
                                             <p class="c7">学习人数：<span>{{ org.students }}</span></p></li>
                                         <li class="c8" style="padding-left:18px;">{{ org.address }}</li>
                                         <li class="pic10" style="padding-left:18px;">经典课程：
